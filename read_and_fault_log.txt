@@ -1,0 +1,23 @@
+[READ] raw=44.7%  smoothed=44.7%  temp=25.0C  consecLow=0 consecHigh=0  state=SAFE
+[READ] raw=46.1%  smoothed=45.4%  temp=25.0C  consecLow=0 consecHigh=0  state=SAFE
+[READ] raw=43.2%  smoothed=44.7%  temp=25.0C  consecLow=0 consecHigh=0  state=SAFE
+[READ] raw=45.5%  smoothed=44.9%  temp=25.0C  consecLow=0 consecHigh=0  state=SAFE
+[READ] raw=18.2%  smoothed=38.1%  temp=25.0C  consecLow=1 consecHigh=0  state=SAFE
+[READ] raw=17.6%  smoothed=32.5%  temp=25.0C  consecLow=2 consecHigh=0  state=SAFE
+[READ] raw=18.9%  smoothed=27.8%  temp=25.0C  consecLow=3 consecHigh=0  state=IRRIGATING
+[READ] raw=18.4%  smoothed=24.3%  temp=25.0C  consecLow=4 consecHigh=0  state=IRRIGATING
+[READ] raw=18.1%  smoothed=19.0%  temp=25.0C  consecLow=15 consecHigh=0  state=IRRIGATING
+[READ] raw=44.2%  smoothed=32.0%  temp=25.0C  consecLow=0 consecHigh=0  state=SAFE
+[READ] raw=45.8%  smoothed=36.4%  temp=25.0C  consecLow=0 consecHigh=0  state=SAFE
+[FAULT] raw=97.0  reason: implausible value
+[READ] raw=44.6%  smoothed=42.1%  temp=25.0C  consecLow=0 consecHigh=0  state=SAFE
+[FAULT] raw=-5.0  reason: implausible value
+[READ] raw=45.1%  smoothed=43.0%  temp=25.0C  consecLow=0 consecHigh=0  state=SAFE
+[READ] raw=45.0%  smoothed=43.6%  temp=25.0C  consecLow=0 consecHigh=0  state=SAFE
+[READ] raw=44.3%  smoothed=44.0%  temp=25.0C  consecLow=0 consecHigh=0  state=SAFE
+[READ] raw=45.0%  smoothed=44.2%  temp=25.0C  consecLow=0 consecHigh=0  state=SAFE
+[READ] raw=45.0%  smoothed=44.4%  temp=25.0C  consecLow=0 consecHigh=0  state=SAFE
+[FAULT] raw=45.0  reason: stuck value
+[FAULT] raw=45.0  reason: stuck value
+[FAULT] raw=45.0  reason: stuck value
+[FAULT] raw=45.0  reason: stuck value

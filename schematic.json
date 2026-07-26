@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "author": "OpenAI",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 144.6,
+      "left": 143.4,
+      "attrs": {}
+    },
+
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot_moisture",
+      "top": -80,
+      "left": 0,
+      "attrs": {
+        "label": "Soil Moisture (%)"
+      }
+    },
+
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot_temp",
+      "top": -80,
+      "left": 300,
+      "attrs": {
+        "label": "Temperature (°C)"
+      }
+    },
+
+    {
+      "type": "wokwi-relay",
+      "id": "relay_pump",
+      "top": 200,
+      "left": -150,
+      "attrs": {
+        "label": "Pump"
+      }
+    },
+
+    {
+      "type": "wokwi-led",
+      "id": "led_fault",
+      "top": 350,
+      "left": 450,
+      "attrs": {
+        "color": "red",
+        "label": "FAULT"
+      }
+    },
+
+    {
+      "type": "wokwi-resistor",
+      "id": "res_led",
+      "top": 360,
+      "left": 350,
+      "attrs": {
+        "value": "220"
+      }
+    },
+
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -240,
+      "left": 170,
+      "attrs": {
+        "pins": "i2c"
+      }
+    }
+  ],
+
+  "connections": [
+
+    ["uno:5V","pot_moisture:VCC","red"],
+    ["uno:GND.1","pot_moisture:GND","black"],
+    ["uno:A0","pot_moisture:SIG","green"],
+
+    ["uno:5V","pot_temp:VCC","red"],
+    ["uno:GND.2","pot_temp:GND","black"],
+    ["uno:A1","pot_temp:SIG","green"],
+
+    ["uno:5V","relay_pump:VCC","red"],
+    ["uno:GND.3","relay_pump:GND","black"],
+    ["uno:5","relay_pump:IN","green"],
+
+    ["uno:13","res_led:1","green"],
+    ["res_led:2","led_fault:A","green"],
+    ["led_fault:C","uno:GND.3","black"],
+
+    ["uno:5V","lcd1:VCC","red"],
+    ["uno:GND","lcd1:GND","black"],
+    ["uno:A4","lcd1:SDA","blue"],
+    ["uno:A5","lcd1:SCL","purple"]
+
+  ]
+}
