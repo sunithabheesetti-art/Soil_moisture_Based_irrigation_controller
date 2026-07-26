@@ -20,11 +20,11 @@ So i have  build a autonomous soil moisture based irrigation controller that mea
 
 ## Five-case test log 
 
-| Case | Phase duration | Expected behaviour | Observed (paste from log) |
-|---|---|---|---|
-| 1. Normal | 30 s | Pump stays OFF, state=SAFE, live-publish each sample | |
-| 2. Genuine excursion | 30 s | consecLow reaches 3 → state=IRRIGATING, pump ON, alert=YES | |
-| 3. Noisy | 30 s | Spikes rejected/absorbed, no pump action, no fault raised | |
-| 4. Stuck sensor | 30 s | After 6 identical samples → state=FAULT, reason "stuck value", pump forced OFF | |
-| 5. Network outage → reconnect | 30 s | `[NET] Offline - buffered` messages, then `[FLUSH]` lines oldest-first, "Backlog fully flushed" | |
+| Case | Phase duration | Expected behaviour 
+|---|---|---|
+| 1. Normal | 30 s | Pump stays OFF, state=SAFE, live-publish each sample | 
+| 2. Genuine excursion | 30 s | consecLow reaches 3 → state=IRRIGATING, pump ON, alert=YES | 
+| 3. Noisy | 30 s | Spikes rejected/absorbed, no pump action, no fault raised | 
+| 4. Stuck sensor | 30 s | After 6 identical samples → state=FAULT, reason "stuck value", pump forced OFF | 
+| 5. Network outage → reconnect | 30 s | `[NET] Offline - buffered` messages, then `[FLUSH]` lines oldest-first, "Backlog fully flushed" | 
 
