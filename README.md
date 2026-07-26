@@ -17,3 +17,14 @@ So i have  build a autonomous soil moisture based irrigation controller that mea
 | Plausible sensor range | moisture 0–100%, temp −10…60 °C | Anything outside is physically impossible → rejected, not smoothed |
 | Stuck-value rule | 6 identical consecutive raw samples | Distinguishes "sensor frozen" from "soil genuinely stable" |
 | Store-and-forward buffer | 30 records, FIFO | Bridges typical outage lengths in this simulation |
+
+## Five-case test log 
+
+| Case | Phase duration | Expected behaviour | Observed (paste from log) |
+|---|---|---|---|
+| 1. Normal | 30 s | Pump stays OFF, state=SAFE, live-publish each sample | |
+| 2. Genuine excursion | 30 s | consecLow reaches 3 → state=IRRIGATING, pump ON, alert=YES | |
+| 3. Noisy | 30 s | Spikes rejected/absorbed, no pump action, no fault raised | |
+| 4. Stuck sensor | 30 s | After 6 identical samples → state=FAULT, reason "stuck value", pump forced OFF | |
+| 5. Network outage → reconnect | 30 s | `[NET] Offline - buffered` messages, then `[FLUSH]` lines oldest-first, "Backlog fully flushed" | |
+
